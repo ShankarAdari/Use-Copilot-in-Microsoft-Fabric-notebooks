@@ -1,0 +1,20 @@
+#### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
+
+import urllib.request
+import os
+
+# Step 1: Download the file
+url = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/proj_23np$defaultview/?format=TSV"
+file_path = "/tmp/proj_23np_defaultview.tsv"
+
+urllib.request.urlretrieve(url, file_path)
+
+# Step 2: Create a temporary folder in the default lakehouse
+lakehouse_temp_folder = "/lakehouse/default/Files/temp"
+os.makedirs(lakehouse_temp_folder, exist_ok=True)
+
+# Step 3: Write the file to the lakehouse temporary folder
+import shutil
+shutil.move(file_path, os.path.join(lakehouse_temp_folder, "proj_23np.tsv"))
+
+print(f"File successfully written to {os.path.join(lakehouse_temp_folder, 'proj_23np.tsv')}")
