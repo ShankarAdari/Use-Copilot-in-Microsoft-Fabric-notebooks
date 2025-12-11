@@ -1,0 +1,5 @@
+%%code
+
+Load the file 'Files/temp/proj_23np.tsv' into a spark dataframe.
+The fields are separated with a tab.
+Show the contents of the DataFrame using display method.
