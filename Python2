@@ -1,0 +1,10 @@
+#### ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
+
+# Load the file 'Files/temp/proj_23np.tsv' into a spark dataframe.
+# The fields have been separated with a tab.
+file_path = "Files/temp/proj_23np.tsv"
+
+spark_df = spark.read.format("csv").option("delimiter", "\t").option("header", "true").load(file_path)
+
+# Show the contents of the DataFrame using display method
+display(spark_df)
