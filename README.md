@@ -47,4 +47,5 @@ Giving Copilot concrete references to your data assets (file paths, table names,
 Loading data as DataFrames or pinning datasets in your Lakehouse supplies richer context, enabling more accurate analysis and transformations.
 
 We can also generatecharts using these commands
+
 https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/Images/copilot-fabric-notebook-step-7-line-chart.png
