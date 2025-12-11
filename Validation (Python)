@@ -1,0 +1,15 @@
+# ATTENTION: AI-generated code can include errors or operations you didn't intend. Review the code in this cell carefully before running it.
+
+from pyspark.sql import SparkSession
+
+# Initialize Spark session
+spark = SparkSession.builder.getOrCreate()
+
+# Load the Population table into a Spark DataFrame
+spark_df = spark.read.table("population")
+
+# Filter for the projected population for geo BE in 2050
+result_df = spark_df.filter((spark_df['geo'] == 'BE') & (spark_df['projection'] == 'Baseline projections')).select('2050')
+
+# Show the result
+result_df.show()
