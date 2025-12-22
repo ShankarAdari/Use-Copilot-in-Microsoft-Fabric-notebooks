@@ -17,5 +17,6 @@ spark_df = spark.read.table("population")
 
 result_df = spark_df.filter((spark_df['geo'] == 'BE') & (spark_df['projection'] == 'Baseline projections')).select('2050')
 
+
 # Show the result
 result_df.show()
