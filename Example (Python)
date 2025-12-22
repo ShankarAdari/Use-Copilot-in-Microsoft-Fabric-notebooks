@@ -9,6 +9,7 @@ spark = SparkSession.builder.getOrCreate()
 
 
 # Load the Population table into a Spark DataFrame
+
 spark_df = spark.read.table("population")
 
 # Filter for the projected population for geo BE in 2050
