@@ -2,7 +2,9 @@
 
 from pyspark.sql import SparkSession
 
+
 # Initialize Spark session
+
 spark = SparkSession.builder.getOrCreate()
 
 # Load the Population table into a Spark DataFrame
