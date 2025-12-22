@@ -19,4 +19,5 @@ result_df = spark_df.filter((spark_df['geo'] == 'BE') & (spark_df['projection'] 
 
 
 # Show the result
+
 result_df.show()
