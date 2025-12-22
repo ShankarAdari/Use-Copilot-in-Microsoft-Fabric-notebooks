@@ -7,6 +7,7 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
 
+
 # Load the Population table into a Spark DataFrame
 spark_df = spark.read.table("population")
 
